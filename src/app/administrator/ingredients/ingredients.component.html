@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <h2 class="text-left">Ingredientes populares</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item hand" *ngFor="let ing of ingredients" (click)="viewMeals(ing)">
+                            <h6 class="text-left">{{ing.strIngredient}}</h6>
+                            <p>{{ing.strDescription}}</p>
+                            <span *ngIf="ing.strType"><b>Tipo: </b>{{ing.strType}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

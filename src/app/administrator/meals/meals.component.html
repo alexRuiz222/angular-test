@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <h2 class="text-left">Platillos</h2>
+
+                    <!-- [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ngb-carousel *ngIf="mealsCarousel" [interval]="5000" class="mx-auto">
+                                <ng-template ngbSlide *ngFor="let meal of mealsCarousel">
+                                    <div class="picsum-img-wrapper text-center">
+                                        <img [src]="meal.strMealThumb" alt="{{meal.strMeal}}" class="img-fluid hand" (click)="viewMeal(meal)">
+                                    </div>
+                                    <div class="carousel-caption bg-black-transparent">
+                                        <h3>{{meal.strMeal}}</h3>
+                                        <!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+                                    </div>
+                                </ng-template>
+                            </ngb-carousel>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" placeholder="Buscar platillo..." [(ngModel)]="txtSearch" (ngModelChange)="search();">
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-3 col-sm-4 mb-2 hand " *ngFor="let meal of meals " (click)="viewMeal(meal) ">
+                            <div class="card border-warning ">
+                                <img class="card-img-top " src="{{meal.strMealThumb}} " alt=" ">
+                                <div class="card-body ">
+                                    <h5 class="card-title ">{{meal.strMeal}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="meals.length==0">
+                        <hr>
+                        <h5 class="text-muted"><i>{{txtSearch.length>0?'No se encontraron resultados para "'+txtSearch+'"...':''}}</i></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <h2 class="text-left">{{meal.strMeal}}</h2>
+                    <div class="row mt-2">
+                        <div class="col-12 text-center">
+                            <img class="img-thumbnail vh70" src="{{meal.strMealThumb}}" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3">
+                            <b>Categoría</b><br>
+                            <span>{{meal.strCategory}}</span>
+                        </div>
+                        <div class="col-3">
+                            <b>Área</b><br>
+                            <span>{{meal.strArea}}</span>
+                        </div>
+                        <div class="col-3" *ngIf="meal.strYoutube">
+                            <b>Video</b><br>
+                            <a href="{{meal.strYoutube}}" target="_blank">Ver video</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6>
+                        Ingredientes:
+                    </h6>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="list-group">
+                                <li class="list-group-item"><b> {{meal.strIngredient1}}</b><span class="float-right">{{meal.strMeasure1}}</span></li>
+                                <li class="list-group-item"><b> {{meal.strIngredient2}}</b><span class="float-right">{{meal.strMeasure2}}</span></li>
+                                <li class="list-group-item"><b> {{meal.strIngredient3}}</b><span class="float-right">{{meal.strMeasure3}}</span></li>
+                                <li class="list-group-item"><b> {{meal.strIngredient4}}</b><span class="float-right">{{meal.strMeasure4}}</span></li>
+                                <li class="list-group-item"><b> {{meal.strIngredient5}}</b><span class="float-right">{{meal.strMeasure5}}</span></li>
+                                <li class="list-group-item"><b> {{meal.strIngredient6}}</b><span class="float-right">{{meal.strMeasure6}}</span></li>
+                                <li class="list-group-item"><b> {{meal.strIngredient7}}</b><span class="float-right">{{meal.strMeasure7}}</span></li>
+                                <li class="list-group-item"><b> {{meal.strIngredient8}}</b><span class="float-right">{{meal.strMeasure8}}</span></li>
+                                <li class="list-group-item"><b> {{meal.strIngredient9}}</b><span class="float-right">{{meal.strMeasure9}}</span></li>
+                                <li class="list-group-item"><b> {{meal.strIngredient10}}</b><span class="float-right">{{meal.strMeasure10}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6>
+                        Instrucciones:
+                    </h6>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>{{meal.strInstructions}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

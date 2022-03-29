@@ -1,0 +1,19 @@
+<div>
+    <div class="modal-header">
+        <h5 class="modal-title">Platillo del día!</h5>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div *ngIf="meal">
+            <img class="w-100" src="{{meal.strMealThumb}}" alt="">
+            <h6 class="mt-2">{{meal.strMeal}}</h6>
+        </div>
+        <!-- {{meal|json}} -->
+    </div>
+    <div class="modal-footer ">
+        <button type="button " class="btn btn-secondary float-left " (click)="activeModal.dismiss() ">Cerrar</button>
+        <button type="button " class="btn btn-primary float-right " (click)="viewMeal()">Ver más</button>
+    </div>
+</div>

@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.bg-sun {
+    background: rgb(253, 29, 29);
+    background: linear-gradient(90deg, rgba(253, 29, 29, 1) 0%, rgba(252, 176, 69, 1) 100%);
+}
+
+.bg-green {
+    background: rgb(101, 253, 29);
+    background: linear-gradient(90deg, rgba(101, 253, 29, 1) 0%, rgba(69, 82, 252, 1) 100%);
+}
+
+.bg-yellow {
+    background-color: #FFD007;
+}
+
+.vh70 {
+    max-height: 70vh;
+}
+
+.hand {
+    cursor: pointer;
+}
+
+.hand-no {
+    cursor: default;
+}
+
+ngb-carousel {
+    max-width: 500px;
+}
+
+.carousel .item img {
+    max-height: 768px;
+    min-width: auto;
+}
+
+.bg-black-transparent {
+    background-color: rgba(0, 0, 0, 0.5);
+}

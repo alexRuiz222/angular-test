@@ -1,0 +1,57 @@
+<section>
+    <div class="row mt-5">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+            <div class="card  my-1 shadow mb-5 bg-blur rounded">
+                <div class="card-content">
+                    <div class="card-body p-0">
+                        <div class="row m-0">
+                            <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center auth-img-bg p-3">
+                                <img class="img-fluid" src="https://cdn.dribbble.com/users/2425253/screenshots/15276005/media/96f7e2bd3cc1089bcbf0eb26d74b4a08.jpg?compress=1&resize=400x300&vertical=top" width="300" alt="">
+                            </div>
+                            <div class="col-lg-6 col-12 px-4 py-3">
+                                <div class="d-lg-none d-flex justify-content-center align-items-center p-3">
+                                    <img class="img-fluid" src="https://cdn.dribbble.com/users/2425253/screenshots/15276005/media/96f7e2bd3cc1089bcbf0eb26d74b4a08.jpg?compress=1&resize=400x300&vertical=top" width="200" alt="">
+                                </div>
+                                <!-- <h4 class="mb-2 card-title text-center">Bienvenido a <span class="warning">APP</span></h4> -->
+                                <!-- <p class="text-center">Por favor inicia sesión con tu cuenta.</p> -->
+
+                                <form [formGroup]="loginForm" (submit)="send()">
+                                    <!-- <div class="mb-3">
+                                        <label for="email" class="form-label">Usuario</label>
+                                        <input type="email" class="form-control" id="email" formControlName="email" [ngClass]="{'is-invalid': loginFormSubmitted && lf.email.invalid, 'is-valid': loginFormSubmitted && lf.email.valid}">
+                                    </div> -->
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Usuario</label>
+                                        <input type="text" class="form-control" id="username" formControlName="username" [ngClass]="{'is-invalid': loginFormSubmitted && lf.username.invalid, 'is-valid': loginFormSubmitted && lf.username.valid}">
+                                        <small id="emailHelp" class="form-text text-muted">Usuario, correo.</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control is-valid" id="password" formControlName="password" [ngClass]="{'is-invalid': loginFormSubmitted && lf.password.invalid, 'is-valid': loginFormSubmitted && lf.password.valid}">
+                                    </div>
+                                    <div class="row" *ngIf="loginError">
+                                        <div class="col-sm-12">
+                                            <ngb-alert type="danger">Usuario o contraseña incorrecta</ngb-alert>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <input type="checkbox" formControlName="rememberMe" id="rememberMe" class="mr-2">
+                                            <label for="rememberMe"><span class=" ">Recordarme</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- <div class="col-6"><a href="">Create account</a></div> -->
+                                        <div class="col-12"><button class="btn btn-primary w-100" [disabled]="!loginForm.valid">Login</button></div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
